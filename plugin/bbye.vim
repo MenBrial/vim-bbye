@@ -49,6 +49,7 @@ function! s:bdelete(action, bang, buffer_name)
 	" Using buflisted() over bufexists() because bufhidden=delete causes the
 	" buffer to still _exist_ even though it won't be :bdelete-able.
 	if buflisted(buffer) && buffer != bufnr("%")
+		exe "lclose"
 		exe a:action . a:bang . " " . buffer
 	endif
 endfunction

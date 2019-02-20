@@ -29,7 +29,7 @@ function! s:error(msg) abort
   let v:errmsg = a:msg
 endfunction
 
-function! bbye#bdelete(action, bang, buffer_name) abort
+function! bbye#bye(action, bang, buffer_name) abort
   let buffer = s:str2bufnr(a:buffer_name)
   let w:bbye_back = 1
 

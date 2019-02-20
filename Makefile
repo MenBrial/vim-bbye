@@ -1,5 +1,5 @@
 NAME := bbye
-VERSION := 1.0.1
+VERSION := 1.0.2
 ID := 4664
 
 love:
@@ -13,5 +13,5 @@ publish:
 
 tag:
 	git tag "v$(VERSION)"
-	
+
 .PHONY: love pack publish tag

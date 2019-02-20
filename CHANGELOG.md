@@ -1,7 +1,7 @@
-## Unreleased
+## 1.0.2 (Feb 20, 2019)
 - Adds `:Bwipeout`. Thanks, [Juan Ibiapina](http://juanibiapina.com)!
-- Fixes `:Bdelete`ing an already unlisted buffer.  
-  That happens when you close a buffer that itself closes when switched away from.  
+- Fixes `:Bdelete`ing an already unlisted buffer.
+  That happens when you close a buffer that itself closes when switched away from.
   Thanks, [Samuel Simões](http://blog.samuelsimoes.com), for debugging help!
 
 ## 1.0.1 (Jul 23, 2013)

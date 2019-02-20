@@ -97,3 +97,11 @@ function! bbye#bye(action, bang, buffer_name) abort
     execute a:action . a:bang . ' ' . buffer
   endif
 endfunction
+
+function! bbye#bdelete(bang, buffer_name) abort
+  call bbye#bye('bdelete', a:bang, a:buffer_name)
+endfunction
+
+function! bbye#bwipeout(bang, buffer_name) abort
+  call bbye#bye('bwipeout', a:bang, a:buffer_name)
+endfunction

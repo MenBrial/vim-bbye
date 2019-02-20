@@ -28,13 +28,13 @@ mkdir -p ~/.vim/bundle/bbye
 Using Git:
 
 ```sh
-git clone https://github.com/moll/vim-bbye.git ~/.vim/bundle/bbye
+git clone https://github.com/RobertAudi/vim-bbye.git ~/.vim/bundle/bbye
 ```
 
 Using Wget:
 
 ```sh
-wget https://github.com/moll/vim-bbye/archive/master.tar.gz -O- | tar -xf- --strip-components 1 -C ~/.vim/bundle/bbye
+wget https://github.com/RobertAudi/vim-bbye/archive/master.tar.gz -O- | tar -xf- --strip-components 1 -C ~/.vim/bundle/bbye
 ```
 
 Then prepend that directory to Vim's `&runtimepath` (or use [Pathogen](https://github.com/tpope/vim-pathogen)):
@@ -95,4 +95,4 @@ About
 [Monday Calendar](https://mondayapp.com) supported the engineering work.
 Inspired by [Bclose.vim](http://vim.wikia.com/wiki/VimTip165), but rewritten to be perfect.
 
-If you find Bbye needs improving or you've got a question, please don't hesitate to email me anytime at andri@dot.ee or [create an issue online](https://github.com/moll/vim-bbye/issues).
+If you find Bbye needs improving or you've got a question, please don't hesitate to [create an issue online](https://github.com/RobertAudi/vim-bbye/issues).

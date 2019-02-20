@@ -37,6 +37,11 @@ function! bbye#bdelete(action, bang, buffer_name) abort
     return s:error('E516: No buffers were deleted. No match for ' . a:buffer_name)
   endif
 
+  if !empty(getbufvar(buffer, '&buftype')) && empty(a:bang)
+    let error = 'Buffer is not a file'
+    return s:error(error . buffer . ' (add ! to override)')
+  endif
+
   if getbufvar(buffer, '&modified') && empty(a:bang)
     let error = 'E89: No write since last change for buffer '
     return s:error(error . buffer . ' (add ! to override)')

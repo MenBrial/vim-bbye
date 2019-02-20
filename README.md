@@ -68,14 +68,6 @@ Occasionally you'll want to close all open buffers and files while leaving your 
 
 For some variations, like closing all-but-one buffer, see [@qiushihe](https://github.com/qiushihe)'s script in https://github.com/moll/vim-bbye/pull/4.
 
-### Aliasing to `:Bclose`
-
-If you've used any `Bclose.vim` scripts before and for some reason need the `:Bclose` command to exist, you may make an alias:
-
-```vim
-command! -bang -complete=buffer -nargs=? Bclose Bdelete<bang> <args>
-```
-
 License
 -------
 

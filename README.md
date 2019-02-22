@@ -83,8 +83,8 @@ For more convoluted language, see the `LICENSE` file.
 About
 -----
 
-**[Andri Möll](http://themoll.com)** authored this in SublemacslipseMate++.
-[Monday Calendar](https://mondayapp.com) supported the engineering work.
-Inspired by [Bclose.vim](http://vim.wikia.com/wiki/VimTip165), but rewritten to be perfect.
+**[Andri Möll](http://themoll.com)** authored this in SublemacslipseMate++.<br/>
+[Monday Calendar](https://mondayapp.com) supported the engineering work.<br/>
+Inspired by [Bclose.vim](http://vim.wikia.com/wiki/VimTip165), but rewritten to be perfect.<br/>
 
 If you find Bbye needs improving or you've got a question, please don't hesitate to [create an issue online](https://github.com/RobertAudi/vim-bbye/issues).

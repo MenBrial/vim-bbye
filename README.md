@@ -19,7 +19,9 @@ Regain your throne as king of buffers!
 Installing
 ----------
 
-The easiest and most modular way is to download Bbye to `~/.vim/bundle`:
+The easiest way to install Bbye is to use a plugin manager.
+
+Otherwise download Bbye to `~/.vim/bundle`:
 
 ```sh
 mkdir -p ~/.vim/bundle/bbye
@@ -57,6 +59,11 @@ As it's likely you'll be using `:Bdelete` often, make a shortcut to `\q`, for ex
 ### Buffer delete vs wipeout
 
 Vim has two commands for closing a buffer: `:bdelete` and `:bwipeout`. The former removes the file from the buffer list, clears its options, variables and mappings. However, it remains in the jumplist, so `Ctrl-o` takes you back and reopens the file. If that's not what you want, use `:bwipeout` or Bbye's equivalent `:Bwipeout` where you would've used `:bdelete`.
+
+### Closing vim when deleting the last buffer
+
+If the variable `g:bbye_close_on_last` is set to `v:true`, upon closing the
+last buffer with either `:Bdelete` or `:Bwipeout`, `vim` will quit.
 
 ### Closing all open buffers and files
 

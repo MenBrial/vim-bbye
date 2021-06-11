@@ -1,3 +1,5 @@
+## 1.0.3 (Jun 11, 2021)
+- Adds g:bbye_close_on_last to close vim when removing the last buffer.
 ## 1.0.2 (Feb 20, 2019)
 - Adds `:Bwipeout`. Thanks, [Juan Ibiapina](http://juanibiapina.com)!
 - Fixes `:Bdelete`ing an already unlisted buffer.

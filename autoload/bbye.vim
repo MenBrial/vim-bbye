@@ -1,3 +1,5 @@
+let g:bbye_close_on_last = get(g:, 'bbye_close_on_last', v:false)
+
 function! s:str2bufnr(buffer) abort
   if empty(a:buffer)
     return bufnr('%')
@@ -58,6 +60,7 @@ function! bbye#bye(action, bang, buffer_name) abort
   for window in reverse(range(1, winnr('$')))
     " For invalid window numbers, winbufnr returns -1.
     if winbufnr(window) != buffer
+      let empty_windows = v:false
       continue
     endif
 
@@ -82,8 +85,7 @@ function! bbye#bye(action, bang, buffer_name) abort
   let back = filter(range(1, winnr('$')), "getwinvar(v:val, 'bbye_back')")[0]
 
   if back
-   execute back . 'wincmd w'
-
+    execute back . 'wincmd w'
     unlet w:bbye_back
   endif
 
@@ -95,6 +97,19 @@ function! bbye#bye(action, bang, buffer_name) abort
   if buflisted(buffer) && buffer != bufnr('%')
     execute 'lclose'
     execute a:action . a:bang . ' ' . buffer
+  endif
+
+  if g:bbye_close_on_last
+    let should_close = v:true
+    for bnum in range(1, bufnr('$'))
+      if bufexists(bnum) && buflisted(bnum)
+        let should_close = v:false
+        break
+      endif
+    endfor
+    if should_close
+      execute 'qall'
+    endif
   endif
 endfunction
 
